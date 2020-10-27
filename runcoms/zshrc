@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 #
 # Executes commands at the start of an interactive session.
 #
@@ -11,3 +18,28 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+alias gpoh='gp origin head'
+alias gpf='gp --force-with-lease'
+alias gpfo='gpf origin head'
+alias be='bundle exec'
+alias vi='nvim'
+alias vim='nvim'
+alias gpg='gpg2'
+
+
+# Set up GPG Agent for SSH
+# export GPG_TTY="$(tty)"
+# export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+# echo UPDATESTARTUPTTY | gpg-connect-agent 1>/dev/null
+
+# Use Yubikey agent for SSH
+# export SSH_AUTH_SOCK=/usr/local/var/run/yubikey-agent.sock
+
+# Use Secret Agent (TouchID) for SSH
+export SSH_AUTH_SOCK=$HOME/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
+
+# Set up asdf
+source ~/.asdf/asdf.sh
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
