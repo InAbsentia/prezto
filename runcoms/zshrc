@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 #
 # Executes commands at the start of an interactive session.
 #
@@ -11,3 +18,55 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+#
+# Additional Aliases
+#
+alias gst='gwS'
+alias ga='gia'
+alias gaa='giu'
+alias gis='git restore --staged'
+alias gpoh='git push origin head'
+alias gpf='git push --force-with-lease'
+alias gpfo='git push --force-with-lease origin head'
+alias vi='nvim'
+alias vim='nvim'
+alias brewi='brew info'
+
+#
+# Erlang Options
+#
+
+export ERL_AFLAGS="-kernel shell_history enabled"
+export KERL_CONFIGURE_OPTIONS="--disable-debug --without-javac"
+export KERL_DOC_TARGETS=chunks
+export KERL_BUILD_DOCS=yes
+
+#
+# SSH Options
+#
+
+# Use Secret Agent (TouchID) for SSH
+export SSH_AUTH_SOCK=$HOME/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
+
+#
+# Load asdf
+#
+
+. $HOME/.asdf/asdf.sh
+
+# append completions to fpath
+fpath=(${ASDF_DIR}/completions $fpath)
+
+# initialise completions with ZSH's compinit
+autoload -Uz compinit
+compinit
+
+# Hook direnv into your shell.
+ASDF_DIRENV_BIN="$(asdf which direnv)"
+eval "$($ASDF_DIRENV_BIN hook zsh)"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
