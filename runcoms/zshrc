@@ -40,10 +40,12 @@ alias gpfo='git push --force-with-lease origin $(git branch --show-current)'
 alias gwa='git worktree add'
 alias gwl='git worktree list'
 alias gwr='git worktree remove'
+alias tig='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias vi=nvim
 alias vim=nvim
 alias brewi='brew info'
 alias lg=lazygit
+alias lgd='lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias mt=mix test
 
 
