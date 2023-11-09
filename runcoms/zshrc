@@ -21,10 +21,6 @@ export KERL_CONFIGURE_OPTIONS="--disable-debug --without-javac"
 export KERL_DOC_TARGETS=chunks
 export KERL_BUILD_DOCS=yes
 
-#
-# SSH Options
-#
-
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 #
@@ -46,8 +42,8 @@ alias vim=nvim
 alias brewi='brew info'
 alias lg=lazygit
 alias lgd='lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME'
-alias mt=mix test
-
+alias mt='mix test'
+alias mdg='mix deps.get'
 
 
 eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/quick-term.omp.json)"
