@@ -80,4 +80,4 @@ fi
 # Use Secret Agent (TouchID) for SSH
 export SSH_AUTH_SOCK=$HOME/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
 
-eval "$(rtx activate zsh)"
+eval "$(mise activate zsh)"
