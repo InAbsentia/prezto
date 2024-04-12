@@ -26,6 +26,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 #
 # Additional Aliases
 #
+alias ls=eza
 alias gst=gwS
 alias ga=gia
 alias gaa=giu
@@ -49,3 +50,4 @@ alias mdg='mix deps.get'
 eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/quick-term.omp.json)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(zoxide init --cmd cd zsh)"
