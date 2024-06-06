@@ -43,11 +43,13 @@ alias vim=nvim
 alias brewi='brew info'
 alias lg=lazygit
 alias lgd='lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+alias fk='thefuck'
 alias mt='mix test'
 alias mdg='mix deps.get'
 
 
-eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/quick-term.omp.json)"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/quick-term.omp.json)"
+eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+eval "$(thefuck --alias)"
