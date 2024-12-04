@@ -27,6 +27,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # Additional Aliases
 #
 alias ls=eza
+alias cat=bat
 alias gst=gwS
 alias ga=gia
 alias gaa=giu
@@ -40,12 +41,17 @@ alias gwr='git worktree remove'
 alias tig='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias vi=nvim
 alias vim=nvim
+alias lvim='NVIM_APPNAME="lazyvim" nvim'
 alias brewi='brew info'
 alias lg=lazygit
 alias lgd='lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias fk='thefuck'
 alias mt='mix test'
 alias mdg='mix deps.get'
+alias dcu='docker compose up --build'
+alias dcd='docker compose down'
+alias dcb='docker compose build'
+alias drmi='docker rmi'
 
 
 
