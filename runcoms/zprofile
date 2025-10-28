@@ -54,8 +54,10 @@ typeset -gU cdpath fpath mailpath path
 # Set the list of directories that Zsh searches for programs.
 path=(
   /opt/homebrew/{bin,sbin}
+  $HOME/.cargo/bin
   /usr/{bin,sbin}
   /{bin,sbin}
+  $HOME/.local/bin/elixir-ls
   $path
 )
 
