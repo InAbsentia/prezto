@@ -64,6 +64,15 @@ alias drmi='docker rmi'
 
 
 eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/quick-term.omp.json)"
-eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)"
+
 eval "$(thefuck --alias)"
+
+export FZF_DEFAULT_OPTS="--style=full"
+source <(fzf --zsh)
+
+eval "$(zoxide init zsh --cmd cd)"
+
+# Use Secret Agent (TouchID) for SSH
+export SSH_AUTH_SOCK=$HOME/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
+
+eval "$(mise activate zsh)"
