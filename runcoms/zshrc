@@ -64,6 +64,35 @@ alias lgd='lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias mt='mix test'
 alias mdg='mix deps.get'
 
+#
+# JJ aliases
+#
+alias lj='lazyjj'
+alias ja='jj absorb'
+alias jbc='jj bookmark create'
+alias jc='jj commit'
+alias jcf='jj config'
+alias jce='jj config edit'
+alias jcs='jj config set'
+alias jd='jj describe'
+alias jde='jj diffedit'
+alias jdf='jj diff'
+alias je='jj edit'
+alias jf='jj fix'
+alias jgf='jj git fetch'
+alias jgn='jj git push --allow-new'
+alias jgp='jj git push'
+alias jl='jj log'
+alias jn='jj new'
+alias jr='jj rebase'
+alias jre='jj redo'
+alias jrv='jj resolve'
+alias jrs='jj restore'
+alias js='jj show'
+alias jst='jj status'
+alias jsq='jj squash'
+alias ju='jj undo'
+
 
 eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/quick-term.omp.json)"
 
