@@ -34,7 +34,8 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 #
 # Aliases
 #
-alias ls=eza
+# alias ls=eza
+alias ls=lsd
 alias cat=bat
 alias docker=podman
 alias pdm=podman
