@@ -66,21 +66,33 @@ alias tig='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 #
 # JJ aliases
 #
+
 alias lj='lazyjj'
+
 alias ja='jj absorb'
+
+alias jb='jj bookmark'
 alias jbc='jj bookmark create'
+alias jbd='jj bookmark delete'
+alias jbl='jj bookmark list'
+alias jbm='jj bookmark move'
+alias jbr='jj bookmark rename'
+alias jbs='jj bookmark set'
+alias jbt='jj bookmark track'
+alias jbu='jj bookmark untrack'
+
 alias jc='jj commit'
 alias jcf='jj config'
-alias jce='jj config edit'
-alias jcs='jj config set'
+alias jcfe='jj config edit'
+alias jcfs='jj config set'
 alias jd='jj describe'
-alias jde='jj diffedit'
 alias jdf='jj diff'
+alias jdfe='jj diffedit'
 alias je='jj edit'
 alias jf='jj fix'
 alias jgf='jj git fetch'
-alias jgn='jj git push --allow-new'
 alias jgp='jj git push'
+alias jgpn='jj git push --allow-new'
 alias jl='jj log'
 alias jn='jj new'
 alias jr='jj rebase'
