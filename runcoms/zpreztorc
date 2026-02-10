@@ -37,14 +37,14 @@ zstyle ':prezto:load' pmodule \
   'directory' \
   'history' \
   'utility' \
-  'completion' \
   'editor' \
   'syntax-highlighting' \
   'history-substring-search' \
-  'prompt' \
   'git' \
-  'homebrew'
-#'autosuggestions' \
+  'homebrew' \
+  'completion'
+# 'prompt' \
+#'autosuggestions'
 
 #
 # Autosuggestions
