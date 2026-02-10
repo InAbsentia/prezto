@@ -42,6 +42,8 @@ alias pdm=podman
 alias vi=nvim
 alias vim=nvim
 alias brewi='brew info'
+alias lg=lazygit
+alias lgd='lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias mt='mix test'
 alias mf='mix format'
 alias mdg='mix deps.get'
@@ -60,10 +62,6 @@ alias gwa='git worktree add'
 alias gwl='git worktree list'
 alias gwr='git worktree remove'
 alias tig='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias lg=lazygit
-alias lgd='lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME'
-alias mt='mix test'
-alias mdg='mix deps.get'
 
 #
 # JJ aliases
