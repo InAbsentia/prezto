@@ -34,6 +34,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 #
 # Aliases
 #
+
 # alias ls=eza
 alias ls=lsd
 alias cat=bat
@@ -44,13 +45,21 @@ alias vim=nvim
 alias brewi='brew info'
 alias lg=lazygit
 alias lgd='lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME'
-alias mt='mix test'
-alias mf='mix format'
+
+#
+# Mix (Elixir) aliases
+#
+
+alias mc='mix compile'
+alias mdc='mix deps.compile'
 alias mdg='mix deps.get'
+alias mf='mix format'
+alias mt='mix test'
 
 #
 # Extra Git aliases
 #
+
 alias gst=gwS
 alias ga=gia
 alias gaa=giu
@@ -61,6 +70,7 @@ alias gpfo='git push --force-with-lease origin $(git branch --show-current)'
 alias gwa='git worktree add'
 alias gwl='git worktree list'
 alias gwr='git worktree remove'
+
 alias tig='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 #
