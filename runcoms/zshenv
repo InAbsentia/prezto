@@ -9,3 +9,25 @@
 if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
+
+# Use Secret Agent (TouchID) for SSH
+export SSH_AUTH_SOCK=$HOME/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
+
+# Ignore stowed dotfiles in mise
+export MISE_IGNORED_CONFIG_PATHS='~/.dotfiles'
+
+#
+# Erlang Options
+#
+
+export ERL_AFLAGS="-kernel shell_history enabled"
+export KERL_CONFIGURE_OPTIONS="--disable-debug --without-javac"
+export KERL_DOC_TARGETS=chunks
+export KERL_BUILD_DOCS=yes
+
+#
+# Elixir Options
+#
+
+local cores=$(sysctl -n hw.ncpu)
+export MIX_OS_DEPS_COMPILE_PARTITION_COUNT=$(expr $cores / 2)
