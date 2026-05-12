@@ -120,7 +120,7 @@ alias jsq='jj squash'
 alias ju='jj undo'
 
 
-eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/quick-term.omp.json)"
+eval "$(starship init zsh)"
 
 eval "$(thefuck --alias)"
 
