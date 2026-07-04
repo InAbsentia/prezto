@@ -61,6 +61,7 @@ path=(
   $HOME/.cargo/bin
   /usr/{bin,sbin}
   /{bin,sbin}
+  $HOME/.config/emacs/bin
   $path
 )
 
