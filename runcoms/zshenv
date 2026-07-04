@@ -13,9 +13,6 @@ fi
 # Use Secret Agent (TouchID) for SSH
 export SSH_AUTH_SOCK=$HOME/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
 
-# Ignore stowed dotfiles in mise
-export MISE_IGNORED_CONFIG_PATHS='~/.dotfiles'
-
 #
 # Erlang Options
 #
